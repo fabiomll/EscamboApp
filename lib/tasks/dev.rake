@@ -5,12 +5,11 @@ namespace :dev do
       images_path = Rails.root.join('public', 'system')
 
       puts "Executando o setup para desenvolvimento..."
-
+      puts "APAGANDO BD... #{%x(rake db:drop)}"
+      
       if Rails.env.development?
-        puts "APAGANDO BD... #{%x(rake db:drop)}"
+        puts "APAGANDO IMAGENS DE PUBLIC/SYSTEM... #{%x(rm -rf #{images_path})}"
       end
-
-      puts "APAGANDO IMAGENS DE PUBLIC/SYSTEM... #{%x(rm -rf #{images_path})}"
 
       puts "CRIANDO BD... #{%x(rake db:create)}"
       puts %x(rake db:migrate)
