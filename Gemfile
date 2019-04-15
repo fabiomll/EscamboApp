@@ -36,7 +36,7 @@ source 'https://rails-assets.org' do
 end
 
 # Use mysql as the database for Active Record
-#gem 'mysql2', '~> 0.3.18'
+gem 'mysql2', '>= 0.3.13', '< 0.5'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -55,6 +55,9 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 
+gem 'faker'
+gem 'doctor_ipsum'
+gem 'lerolero_generator'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -69,10 +72,10 @@ group :development, :test do
   gem 'byebug'
   gem 'better_errors'
   gem 'rails-erd'
-  gem 'faker'
-  gem 'doctor_ipsum'
+  #gem 'faker'
+  #gem 'doctor_ipsum'
   gem 'mailcatcher'
-  gem 'lerolero_generator'
+  #gem 'lerolero_generator'
 end
 
 group :development do
@@ -84,10 +87,9 @@ group :development do
   gem 'capistrano', '~> 3.7'
   gem 'capistrano-bundler', '~> 1.2'
   gem 'capistrano-rails', '~> 1.2'
-  gem 'capistrano-rvm'
 
 end
 
 group :production do
-  gem 'mysql2', '~> 0.3.18'
+  gem 'mysql2', '>= 0.3.13', '< 0.5'
 end
