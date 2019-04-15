@@ -7,8 +7,9 @@ namespace :dev do
       puts "Executando o setup para desenvolvimento..."
 
       if Rails.env.development?
-      puts "APAGANDO BD... #{%x(rake db:drop)}"
-      
+        puts "APAGANDO BD... #{%x(rake db:drop)}"
+      end
+
       puts "APAGANDO IMAGENS DE PUBLIC/SYSTEM... #{%x(rm -rf #{images_path})}"
 
       puts "CRIANDO BD... #{%x(rake db:create)}"
