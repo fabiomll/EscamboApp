@@ -87,9 +87,10 @@ group :development do
   gem 'capistrano', '~> 3.7'
   gem 'capistrano-bundler', '~> 1.2'
   gem 'capistrano-rails', '~> 1.2'
+  gem 'capistrano-rvm'
 
 end
 
 group :production do
-  gem 'mysql2', '>= 0.3.13', '< 0.5'
+  #gem 'mysql2', '>= 0.3.13', '< 0.5'
 end
